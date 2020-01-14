@@ -4,6 +4,10 @@ body {
     background: #F9FBFD;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -209,40 +213,4 @@ input {
     letter-spacing: -0.23px;
     color: #1C2750;
     padding: 50px;
-}
-
-/* Modal */
-#modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,.5);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#modal div {
-  position: relative;
-  background-color: white;
-  padding: 4em 2em;
-}
-
-#modal div a {
-  position: absolute;
-  top: -30px;
-  right: 0;
-}
-
-#modal:not(:target) {
-    visibility: hidden;
-    opacity: 0;
-}
-
-#modal:target {
-    visibility: visible;
-    opacity: 1;
 }
