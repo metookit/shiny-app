@@ -12,6 +12,26 @@ checkbox.addEventListener('change', function() {
     }
 })
 
+window.addEventListener('unload', function() {
+
+  if(checkbox.checked){
+    localStorage.setItem('currentTheme', 'dark');
+  }
+  else{
+    localStorage.setItem('currentTheme', 'light');
+  }
+})
+
+window.addEventListener('load', function() {
+    var curTheme = this.localStorage.getItem('currentTheme');
+    if(curTheme == 'dark'){
+      document.documentElement.setAttribute('data-theme', 'dark')
+      this.document.getElementById("checkboxSwitch").checked = true;
+    }
+    else{
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
 let trans = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {

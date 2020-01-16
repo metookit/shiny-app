@@ -20,6 +20,7 @@ html{
     --searchbox-bg: #FFFFFF;
     --toggle-c: #fff;
     --toggle-border: #E0E0E0;
+    --toggle-bg: #fff;
     --region-text: #1C2750;
     --modal-close: #76706B;
 
@@ -48,6 +49,7 @@ html[data-theme='dark']{
     --searchInput-text: #e2dbdb;
     --toggle-c: #203250;
     --toggle-border: #203250;
+    --toggle-bg: #203250;
     --region-text: #FFFFFF;
     --modal-close: #FFFFFF;
     
@@ -125,10 +127,10 @@ input[type=checkbox]:before { content:""; display:inline-block; width:26px; heig
 input[type=checkbox]:checked:before { background:rgb(255, 255, 255); }
 
 input[type=checkbox]:before{
-    background: url(/img/moon.svg)#fff;
+    background: url(/img/moon.svg)var(--toggle-bg);
 }
 input[type=checkbox]:checked:before{
-    background: url(/img/sun.svg)#203250;;
+    background: url(/img/sun.svg)var(--toggle-bg);
 }
 
 html.transition,
@@ -156,7 +158,8 @@ html.transition *:after {
 }
 
 .search-box__input{
-    border: 0; 
+    border: 0;
+    height: 25px; 
     background: var(--searchInput-bg);
     color: var(--searchInput-text);
 }
