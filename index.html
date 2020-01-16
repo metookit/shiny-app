@@ -13,7 +13,7 @@
 <body>
     <header>
         <a href="https://www.metookit.com/" target="_blank">
-            <img class="logo__img" src="/img/logo.svg" alt="logo of Me Too Kit company" >
+            <img class="logo__img" src="img/logo.svg" alt="logo of Me Too Kit company" >
         </a>
         <p class="logo__text">MKTC</p>
         <nav class="header__nav">
@@ -53,32 +53,7 @@
         </label>
     </header>
 
-    <!-- checkbox script (start)-->
-    <script>
-
-        var checkbox = document.querySelector('input[name=theme');
-
-        checkbox.addEventListener('change', function() {
-            if(this.checked) {
-                trans()
-                document.documentElement.setAttribute('data-theme', 'dark')
-            }
-            else{
-                trans()
-                document.documentElement.setAttribute('data-theme', 'light')
-            }
-        })
-
-        let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-                document.documentElement.classList.remove('transition');
-            }, 1000)
-        }
-
-    </script>
-    <!-- checkbox script (end)-->
-
+    
     <section class="hero">
         <div class="hero__container">            
             <img class="hero__img" src="/img/graph-line.svg" alt="image of a long line, graph style">            
@@ -90,9 +65,9 @@
         </div>
     </section>
 
-    <section class="content">
-        <table class="content__table">
-            <tr class="content__table-title">
+    <section data-line class="content">
+        <table data-line class="content__table">
+            <tr  class="content__table-title">
               <th class="content__table-title-item">S/N</th>
               <th class="content__table-title-item">State</th>
               <th class="content__table-title-item">Population</th>
@@ -107,7 +82,7 @@
               <th class="content__table-title-item">Arrest per Report</th>
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">1</th>
                 <th class="content__table-content-item">Florida</th>
                 <th class="content__table-content-item">21299325</th>
@@ -122,7 +97,7 @@
                 <th class="content__table-content-item">0.243829</th>                
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">2</th>
                 <th class="content__table-content-item">New York</th>
                 <th class="content__table-content-item">21299325</th>
@@ -137,7 +112,7 @@
                 <th class="content__table-content-item">0.243829</th>              
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">3</th>
                 <th class="content__table-content-item">Pennsylvania</th>
                 <th class="content__table-content-item">21299325</th>
@@ -152,7 +127,7 @@
                 <th class="content__table-content-item">0.243829</th>                
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">4</th>
                 <th class="content__table-content-item">Illinois</th>
                 <th class="content__table-content-item">21299325</th>
@@ -167,7 +142,7 @@
                 <th class="content__table-content-item">0.243829</th>                 
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">5</th>
                 <th class="content__table-content-item">Ohio</th>
                 <th class="content__table-content-item">21299325</th>
@@ -182,7 +157,7 @@
                 <th class="content__table-content-item">0.243829</th>                 
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">6</th>
                 <th class="content__table-content-item">Georgia</th>
                 <th class="content__table-content-item">21299325</th>
@@ -197,7 +172,7 @@
                 <th class="content__table-content-item">0.243829</th> 
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">7</th>
                 <th class="content__table-content-item">North Caroline</th>
                 <th class="content__table-content-item">21299325</th>
@@ -212,7 +187,7 @@
                 <th class="content__table-content-item">0.243829</th>                
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">8</th>
                 <th class="content__table-content-item">Michigan</th>
                 <th class="content__table-content-item">21299325</th>
@@ -227,7 +202,7 @@
                 <th class="content__table-content-item">0.243829</th> 
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">9</th>
                 <th class="content__table-content-item">New Jersey</th>
                 <th class="content__table-content-item">21299325</th>
@@ -242,7 +217,7 @@
                 <th class="content__table-content-item">0.243829</th>                
             </tr>
 
-            <tr class="content__table-content">
+            <tr data-line class="content__table-content">
                 <th class="content__table-content-item">10</th>
                 <th class="content__table-content-item">Virginia</th>
                 <th class="content__table-content-item">21299325</th>
@@ -259,17 +234,48 @@
         </table> 
     </section>
 
-    <div id="modal">
-  <a href="#">X</a>
-  This is an Modal. Hello!
- </div>
+    <section data-modal class="modal">
+        <div class="modal__card">
+            <span class="modal__close">&times;</span>        
+            <h1 class="modal__title">State Name</h1>
+            <table class="modal__table">
+              <tr class="modal__line">
+                <th class="modal__line-title">Nurses per sexual assault</th>
+                <th class="modal__line-content"> 230 </th>
+              </tr>
+              <tr class="modal__line">
+                <th class="modal__line-title">Population per sexual assault Nurse</th>
+                <th class="modal__line-content"> 48478749</th>
+              </tr>
+              <tr class="modal__line">
+                <th class="modal__line-title">Population per Nurse</th>
+                <th class="modal__line-content"> 9389394</th>
+              </tr>
+              <tr class="modal__line">
+                <th class="modal__line-title">State Code</th>
+                <th class="modal__line-content">DL</th>
+              </tr>
+            <tr class="modal__line">
+                <th class="modal__line-title">Region</th>
+                <th class="modal__line-content"> South </th>
+              </tr>
+            <tr class="modal__line"> 
+                <th class="modal__line-title">Division</th>
+                <th class="modal__line-content"> Shout North </th>
+              </tr> 
+             </table>
+
+        </div>
+    </section>
+
 
     <footer class="footer">
         <div class="footer__pages">
             <p class="footer__pages-number"> <span class="bold">&lt</span>Previous 1 2 3 Next<span class="bold">&gt</span></p>
         </div>        
     </footer>
-
+    
+    <script defer src="js/main.js"></script>
     
 </body>
 </html>
