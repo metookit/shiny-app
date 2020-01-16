@@ -118,13 +118,23 @@ header * {
     border: solid 1px var(--toggle-border);
     border-radius: 3px;
     background-color: var(--toggle-c);
-    padding: 5px 10px;
+    padding: 5px 5px;
+    height: 31px;
+    width: 31px;
 }
 
 input[type=checkbox]{
     cursor: pointer;
-    
-    
+}
+
+input[type=checkbox]:before { content:""; display:inline-block; width:26px; height:26px; background:rgb(0, 0, 0); }
+input[type=checkbox]:checked:before { background:rgb(255, 255, 255); }
+
+input[type=checkbox]:before{
+    background: url(/img/moon.svg)#fff;
+}
+input[type=checkbox]:checked:before{
+    background: url(/img/sun.svg)#203250;;
 }
 
 html.transition,
